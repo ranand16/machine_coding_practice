@@ -22,7 +22,7 @@ export const ProgressBar = ({ simulatedTaskTime = 15000 }) => {
     useEffect(() => {
         setTimeout(() => {
             setTaskComplete(true);
-        }, 50);
+        }, 50); // after 50ms task will be completed and progress bar will start
     });
     return (
         <div
