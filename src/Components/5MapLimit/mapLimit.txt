@@ -1,0 +1,42 @@
+// practice 
+
+const arrayChop = (array, size) => {
+    const result = []; // the array that will store the chopped array
+    const i = 0; // iterator
+    const temp = [...array];
+
+    while(i < temp.length) { // run loop to push each sub array(chopped) to result array
+        result.push(temp.slice(i, i+size));
+        i = i + size;
+    }
+    return result;
+}
+
+const mapLimit = (array, n, fn) => { // [1,2,3,4,5]
+    return new Promise((resolve, reject) => {
+        const CA = arrayChop(array, n); // [[1,2,3],[4,5]]
+
+        CA.reduce((a, b) => {
+            return a.then((val)=>{
+                return new Promise((resolve, reject) => {
+                    let tasksDone = 0;
+                    cont results = [];    
+                    b.forEach((task)=>{
+                        fn(task, (error, numb)=>{
+                            if(error) {
+                                reject(error)
+                            } else {
+                                results.push(numb)
+                                tasksDone++;
+                                if(tasksDone >= b.length) {
+                                    resolve([...val, ...results])
+                                }
+                            }
+                        })
+                    })
+                })
+            })
+        }, Promise.resolve([]))
+    })
+    
+}
