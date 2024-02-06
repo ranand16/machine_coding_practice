@@ -3,6 +3,9 @@ import CounterdownTimerWrapper from "./Components/1ContdownTimer";
 import ProgressBarNaviWrapper from "./Components/2ProgressBarNavi";
 import ReactElementForSingletonFunction from "./Components/3SingletonPattern";
 import CircuitBreakerCom from "./Components/4CircuitBreaker";
+import { HighlightWords } from "./Components/6HighlightWordsInStrings";
+const str = "Ultimate JavaScript / FrontEnd Guide";
+const words = ["Front", "End", "JavaScript"];
 
 const App = () => {
     return (
@@ -13,7 +16,10 @@ const App = () => {
             {/* <br />
             <ReactElementForSingletonFunction /> */}
             <br />
-            <CircuitBreakerCom />
+            {/* <CircuitBreakerCom /> */}
+            <br />
+            <HighlightWords str={str} words={words} />
+            <br />
         </main>
     );
 };
