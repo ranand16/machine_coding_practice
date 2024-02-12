@@ -1,0 +1,16 @@
+const throttle = (fn, delay) => {
+    let lastTimerId; 
+    let lastRan;
+    return function() {
+        const context = this;
+        if(!lastRan) {
+            fn.apply(context, arguments);
+        } else {
+            if(Date.now()-lastRan >= delay) return
+            lastTimerId = setTimeout(() => {
+                fn.apply(context, arguments);
+                lastRan = Date.now()
+            }, delay - (Date.now() - lastRan))
+        }
+    }
+}
