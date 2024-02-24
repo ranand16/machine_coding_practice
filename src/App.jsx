@@ -21,7 +21,7 @@ const App = () => {
             <br />
             {/* <HighlightWords str={str} words={words} /> */}
             <br />
-            <FeatureFlagEntryApp />
+            {/* <FeatureFlagEntryApp /> */}
             <br />
         </main>
     );
