@@ -5,6 +5,7 @@ import ReactElementForSingletonFunction from "./Components/3SingletonPattern";
 import CircuitBreakerCom from "./Components/4CircuitBreaker";
 import { HighlightWords } from "./Components/6HighlightWordsInStrings";
 import FeatureFlagEntryApp from "./Components/9FeatureFlag";
+import ModalParent from "./Components/10ModalComponent";
 const str = "Ultimate JavaScript / FrontEnd Guide";
 const words = ["Front", "End", "JavaScript"];
 
@@ -23,6 +24,7 @@ const App = () => {
             <br />
             {/* <FeatureFlagEntryApp /> */}
             <br />
+            <ModalParent />
         </main>
     );
 };

@@ -1,0 +1,18 @@
+.modal-backdrop {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+}
+
+.modal-wrapper {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    transform: translate(-50%, -50%);
+}
