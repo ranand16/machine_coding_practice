@@ -1,0 +1,18 @@
+.imagecontainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.imagecontainer > div {
+    background-size: contain;
+    height: 100px;
+}
+
+.slidercontainer {
+    position: relative;
+}
+
+.slidercontainer > div {
+    position: absolute;
+}

@@ -6,6 +6,7 @@ import CircuitBreakerCom from "./Components/4CircuitBreaker";
 import { HighlightWords } from "./Components/6HighlightWordsInStrings";
 import FeatureFlagEntryApp from "./Components/9FeatureFlag";
 import ModalParent from "./Components/10ModalComponent";
+import SlideshowParent from "./Components/11Slideshow";
 const str = "Ultimate JavaScript / FrontEnd Guide";
 const words = ["Front", "End", "JavaScript"];
 
@@ -24,7 +25,9 @@ const App = () => {
             <br />
             {/* <FeatureFlagEntryApp /> */}
             <br />
-            <ModalParent />
+            {/* <ModalParent /> */}
+            <br/>
+            <SlideshowParent />
         </main>
     );
 };
