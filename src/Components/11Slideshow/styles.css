@@ -1,18 +1,36 @@
 .imagecontainer {
     display: flex;
+    position: relative;
     flex-wrap: wrap;
     gap: 10px;
+    height: 100px;
+    padding: 0px 16px;
+    user-select: none; 
+}
+
+.imagecontainer div {
+    cursor: pointer;
 }
 
 .imagecontainer > div {
     background-size: contain;
-    height: 100px;
+}
+
+.imagecontainer .nav-btns {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.imagecontainer .nav-btns-prev {
+    left: 0px;
+}
+
+.imagecontainer .nav-btns-next {
+    right: 0px;
 }
 
 .slidercontainer {
     position: relative;
-}
-
-.slidercontainer > div {
-    position: absolute;
+    padding-top: 40px;
 }
